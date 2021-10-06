@@ -1,29 +1,17 @@
 #include<iostream>
 using namespace std;
-class insertion
-{
-    private:
-        int arr[20],n,i,j;
-    public:
-    void accept();
-    void sort();
-    void display();
-};
 
-void insertion::accept()
+int main()
 {
-    cout<<"\nEnter number of elements : ";
+     int arr[20],n,i,j;
+     cout<<"\nEnter number of elements : ";
     cin>>n;
     cout<<"\nEnter the unsorted elements : "<<endl;
     for(i=0;i<n;i++)
     {
         cin>>arr[i];
     }
-}
-
-void insertion::sort()
-{
-    int temp;
+     int temp;
     for(i=1;i<n;i++)
     {
         temp = arr[i];
@@ -35,22 +23,12 @@ void insertion::sort()
         }
         arr[j+1] = temp;
     }
-}
-
-void insertion::display()
-{
-    cout<<"\n\nThe elements after sorting are : "<<endl;
+    
+     cout<<"\n\nThe elements after sorting are : "<<endl;
     for(i=0;i<n;i++)
     {
         cout<<arr[i]<<"   ";
     }
-}
-
-int main()
-{
-    insertion obj;
-    obj.accept();
-    obj.sort();
-    obj.display();
+    
     return 0;
 }
